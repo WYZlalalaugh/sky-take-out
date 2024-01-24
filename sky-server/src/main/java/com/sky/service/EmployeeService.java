@@ -16,6 +16,12 @@ public interface EmployeeService {
     Employee login(EmployeeLoginDTO employeeLoginDTO);
     //新增员工
     void save(EmployeeDTO employeeDTO);
-
+    //分页查询员工
     PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+    //启用或禁用员工
+    void startOrStop(Integer status, Long id);
+    //根据id查询员工
+    Employee getById(Long id);
+    //修改员工信息
+    void update(EmployeeDTO employeeDTO);
 }
