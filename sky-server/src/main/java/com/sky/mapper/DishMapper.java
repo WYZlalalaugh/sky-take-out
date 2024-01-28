@@ -33,4 +33,9 @@ public interface DishMapper {
     void deleteById(List<Long> ids);
     @AutoFill(value = OperationType.UPDATE)
     void update(Dish dish);
+
+    List<Dish> getByCategoryId(Dish dish);
+    @Select("select dish.* from dish left join setmeal_dish sd on dish.id = sd.dish_id " +
+            "where sd.setmeal_id=#{setmealId}")
+    List<Dish> getBySetmealId(Long id);
 }
