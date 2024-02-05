@@ -53,3 +53,9 @@ sky:
   wechat:
     appid: ${sky.wechat.appid}
     secret: ${sky.wechat.secret}
+  shop:
+    address: 安徽省合肥市蜀山区滨湖前城
+  baidu:
+    ak: DBXgkUjGDywi98HOEhoVdbvpVQNPBnFH
+
+
