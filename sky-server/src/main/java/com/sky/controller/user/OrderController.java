@@ -74,4 +74,10 @@ public class OrderController {
         orderService.complete(id);
         return Result.success();
     }
+    @GetMapping("/remainder/{id}")
+    @ApiOperation("用户催单")
+    public Result remainder(@PathVariable Long id){
+        orderService.reminder(id);
+        return Result.success();
+    }
 }
